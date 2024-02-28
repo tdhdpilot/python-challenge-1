@@ -52,10 +52,14 @@ menu = {
 
 # 1. Set up order list. Order list will store a list of dictionaries for
 # menu item name, item price, and quantity ordered
+## Create an empty list. This list will later store a customer's order in dictionary format, as follows:
+# Asked BCS learning assistant questions to get an idea of how to understand the workflow
 
+order_list = []
+print("order_list", order_list)
 
 # Launch the store and present a greeting to the customer
-print("Welcome to the variety food truck.")
+print("Welcome to the variety food truck.") 
 
 # Customers may want to order multiple items, so let's create a continuous
 # loop
