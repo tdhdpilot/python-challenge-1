@@ -226,17 +226,17 @@ for item in order_list:
 
     # 7. Store the dictionary items as variables
     for item in order_list:
-        item_name = item['name']
-        price = item['price']
-        quantity = item['quantity']
+        item_name = item['Item name']
+        price = item['Price']
+        quantity = item['Quantity']
 
         print(f"Item Name: {item_name}, Price: {price}, Quantity: {quantity}")
 
 
     # 8. Calculate the number of spaces for formatted printing
-        max_item_name_length = max(len(item['name']) for item in order_list)
-        max_price_length = max(len(str(item['price'])) for item in order_list)
-        max_quantity_length = max(len(str(item['quantity'])) for item in order_list)
+        max_item_name_length = max(len(item['Item name']) for item in order_list)
+        max_price_length = max(len(str(item['Price'])) for item in order_list)
+        max_quantity_length = max(len(str(item['Quantity'])) for item in order_list)
 
         total_spaces = max(max_item_name_length, len("Item Name")) + max(max_price_length, len("Price")) + max(max_quantity_length, len("Quantity")) + 10
 
@@ -253,5 +253,5 @@ for item in order_list:
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
 # and print the prices.
-total_cost = sum(item['price'] * item['quantity'] for item in order_list)
+total_cost = sum(item['Price'] * item['Quantity'] for item in order_list)
 print(f"Total Cost of the Order: ${total_cost:.2f}")
