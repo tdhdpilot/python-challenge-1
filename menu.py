@@ -221,24 +221,46 @@ for item in order_list:
     price = item['Price']
     quantity = item['Quantity']
 
+    #print(order_list)
+
+    # Perform operations using the stored variables
+    #print(f"Item Name: {item_name}, Price: {price}, Quantity: {quantity}")
+
    
-    # 8. Calculate the number of spaces for format1
-    # ed printing
+    # 8. Calculate the number of spaces for format
+    # ted printing
     max_item_name_length = max(len(item['Item name']) for item in order_list)
     max_price_length = max(len(str(item['Price'])) for item in order_list)
     max_quantity_length = max(len(str(item['Quantity'])) for item in order_list)
 
     total_spaces = max(max_item_name_length, len("Item Name")) + max(max_price_length, len("Price")) + max(max_quantity_length, len("Quantity")) + 10
 
-    # print(f"Total Spaces Required: {total_spaces}")
+    #print(f"Total Spaces Required: {total_spaces}")
         
     # 9. Create space strings
-    space_string = " " * total_spaces
+    #space_string = " " * total_spaces
+    space_string_item_name = " " * (max_item_name_length - len(item_name))
+    space_string_price = " " * (max_price_length - len(str(price)))
+    space_string_quantity = " " * (max_quantity_length - len(str(quantity)))
 
+    #print(f"|{space_string}|")  # Print a line with the calculated spaces
 
     # 10. Print the item name, price, and quantity
+    
     print(item_name, price, quantity)
+    #print(item_name[max_item_name_length], price[max_price_length], quantity[max_quantity_length])
 
+    #for item_name, price, quantity in order_list(item[item_name],item[price],item[quantity]"):
+    #print(f"{item_name:{max_item_name_length}} {price:{max_price_length}.2f} {quantity:{max_quantity_length}}")
+
+    # for item in order_list:
+    #     item_name = item['Item name']
+    #     price = item['Price']
+    #     quantity = item['Quantity']
+    #     print(f"{item_name:{max_item_name_length}} {price:{max_price_length}.2f} {quantity:{max_quantity_length}}")
+
+    #print(f"Item Name: {item_name}{space_string_item_name}, Price: {price}{space_string_price}, Quantity: {quantity}{space_string_quantity}")
+   
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
