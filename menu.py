@@ -221,10 +221,7 @@ for item in order_list:
 
     #print(order_list)
 
-    # Perform operations using the stored variables
-    #print(f"Item Name: {item_name}, Price: {price}, Quantity: {quantity}")
-
-   
+      
     # 8. Calculate the number of spaces for format
     # ted printing
 
