@@ -18,6 +18,9 @@ This food truck menu system is designed to allow a customer to cycle through Mai
 
 ### Sources
 
+- Class Lessons
+- Instructor
+- Teacher Assistant
 - Classmates
 - Xpert Learning Assistant
 - AskBCS
