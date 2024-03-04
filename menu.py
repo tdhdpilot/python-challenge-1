@@ -237,9 +237,9 @@ for item in order_list:
         
     # 9. Create space strings
     #space_string = " " * total_spaces
-    # space_item = " " * (max_item_name_length + 5)
-    # space_price = " " * (max_price_length + 2)
-    # space_quantity = " " * (max_quantity_length)
+    space_item = " " * (max_item_name_length + 5)
+    space_price = " " * (max_price_length + 2)
+    space_quantity = " " * (max_quantity_length)
           
 
     # 10. Print the item name, price, and quantity
