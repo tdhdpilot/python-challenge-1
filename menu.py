@@ -170,8 +170,8 @@ while place_order:
                     print("You didn't select a valid menu option.")
                              
             else:
-                    # Tell the customer they didn't select a menu option
-                    print(f"{menu_category} was not a menu option.")
+                # Tell the customer they didn't select a menu option
+                print(f"{menu_category} was not a menu option.")
     else:
         # Tell the customer they didn't select a number
         print("You didn't select a number.")
@@ -209,8 +209,6 @@ print("This is what we are preparing for you.\n")
 # Uncomment the following line to check the structure of the order
 #print(order_list)
 
-print("Item name                 | Price  | Quantity")
-print("--------------------------|--------|----------")
 
 # 6. Create a for loop to loop through the order list.
 for item in order_list:
@@ -229,38 +227,34 @@ for item in order_list:
    
     # 8. Calculate the number of spaces for format
     # ted printing
+
+    # Calculate the spaces needed for formatting
+    
+
     max_item_name_length = max(len(item['Item name']) for item in order_list)
     max_price_length = max(len(str(item['Price'])) for item in order_list)
     max_quantity_length = max(len(str(item['Quantity'])) for item in order_list)
-
-    total_spaces = max(max_item_name_length, len("Item Name")) + max(max_price_length, len("Price")) + max(max_quantity_length, len("Quantity")) + 10
-
-    #print(f"Total Spaces Required: {total_spaces}")
         
     # 9. Create space strings
     #space_string = " " * total_spaces
-    space_string_item_name = " " * (max_item_name_length - len(item_name))
-    space_string_price = " " * (max_price_length - len(str(price)))
-    space_string_quantity = " " * (max_quantity_length - len(str(quantity)))
-
-    #print(f"|{space_string}|")  # Print a line with the calculated spaces
+    # space_item = " " * (max_item_name_length + 5)
+    # space_price = " " * (max_price_length + 2)
+    # space_quantity = " " * (max_quantity_length)
+          
 
     # 10. Print the item name, price, and quantity
+    #Print the receipt header
+print(f"{'Item name':<{max_item_name_length}} | {'Price':<{max_price_length}} | {'Quantity':<{max_quantity_length}}")
+print("-" * (max_item_name_length + max_price_length + max_quantity_length + 18))
     
-    print(item_name, price, quantity)
-    #print(item_name[max_item_name_length], price[max_price_length], quantity[max_quantity_length])
 
-    #for item_name, price, quantity in order_list(item[item_name],item[price],item[quantity]"):
-    #print(f"{item_name:{max_item_name_length}} {price:{max_price_length}.2f} {quantity:{max_quantity_length}}")
-
-    # for item in order_list:
-    #     item_name = item['Item name']
-    #     price = item['Price']
-    #     quantity = item['Quantity']
-    #     print(f"{item_name:{max_item_name_length}} {price:{max_price_length}.2f} {quantity:{max_quantity_length}}")
-
-    #print(f"Item Name: {item_name}{space_string_item_name}, Price: {price}{space_string_price}, Quantity: {quantity}{space_string_quantity}")
-   
+# Loop through the order list and print each item
+for item in order_list:
+    item_name = item["Item name"]
+    price = item["Price"]
+    quantity = item["Quantity"]
+    
+    print(f"{item_name:<{max_item_name_length}} | ${price:<{max_price_length}.2f} | {quantity:<{max_quantity_length}}")
 
 # 11. Calculate the cost of the order using list comprehension
 # Multiply the price by quantity for each item in the order list, then sum()
