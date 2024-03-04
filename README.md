@@ -8,13 +8,13 @@ This food truck menu system is designed to allow a customer to cycle through Mai
 
 - The customer will be allowed to place an order, which includes storing the customer's order.
 
-- Input validation to _check_ if the customer input menu_selection is a number. If it isn't, _print_ an error message.
+- Input validation to _check_ if the customer input menu selection is a number. If it isn't, _print_ an error message.
 
 - To continue ordering or allow a exit, a **Match:Case** statement that checks for **Y** or **N**, and includes a _default_ option if neither letter is entered by the customer.
 
-- Once the order is placed the receipt with the list of items ordered and total price of the order in _printed_.
+- Once the order is placed the receipt with the list of items ordered and total price of the order is _printed_.
 
-<img src="./Image/Receipt_Sample.png>
+    <img src="./Image/Receipt_Sample.png">
 
 ### Sources
 
